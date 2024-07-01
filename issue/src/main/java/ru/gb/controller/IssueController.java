@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.gb.aspects.Timer;
 import ru.gb.model.Issue;
 import ru.gb.service.IssueService;
 
@@ -14,6 +15,7 @@ import java.util.NoSuchElementException;
 @Slf4j
 @RestController
 @RequestMapping("/issue")
+@Timer
 public class IssueController {
 
     @Autowired

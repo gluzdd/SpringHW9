@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.gb.aspects.Timer;
 import ru.gb.model.Reader;
 import ru.gb.provider.IssueProvider;
 import ru.gb.service.ReaderService;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/readers")
+@Timer
 public class ReaderController {
     private final ReaderService service;
 

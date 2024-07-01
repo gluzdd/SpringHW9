@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.gb.aspects.Timer;
 import ru.gb.model.Book;
 import ru.gb.service.BookService;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/books")
+@Timer
 public class BookController {
 
     private final BookService service;

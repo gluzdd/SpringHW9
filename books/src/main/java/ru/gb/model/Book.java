@@ -1,6 +1,7 @@
 package ru.gb.model;
 
 import jakarta.persistence.*;
+import ru.gb.aspects.Timer;
 
 @Entity
 @Table(name = "books")
